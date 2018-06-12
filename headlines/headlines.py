@@ -3,8 +3,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-from headline_routes import *
-from headline_routes2 import *
+
 from headline_route3 import *
 
 
