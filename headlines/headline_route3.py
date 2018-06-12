@@ -15,7 +15,7 @@ news_feeds = {
 "iol": "http://www.iol.co.za/cmlink/1.640"
 }
 
-@app.route('/headlines/<publications>')
+@app.route('/headlines3/<publications>')
 def headlines3(publications="bbc"):
     feed = feedparser.parse(news_feeds[publications])
     first_article = feed['entries'] [0]
@@ -24,7 +24,7 @@ def headlines3(publications="bbc"):
                         <title>News Headlines</title>
                     </head>
                     <body>
-                        <h2> Vanguard Headlines</h2>
+                        <h2>""" + publications.upper() + """ Headlines</h2>
                         <b>{0}</b> <br />
                         <i>{1}</i> <br />
                         <p>{2}</p> <br />
