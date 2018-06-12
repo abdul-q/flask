@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>News Headlines</title>
+    </head>
+    <body>
+        <h2>{{publications}} Headlines</h2>
+        {% for article in articles %}            
+            <b><a href="{{article.link}}">{{article.title}}</a></b> <br />
+            <i>{{article.published}}</i> <br />
+            <p>{{article.summary}}</p> <br />
+            <!--  this adds an horizotal space between the articles -->
+            <hr /> 
+        {% endfor %}
+    </body>
+</html>
